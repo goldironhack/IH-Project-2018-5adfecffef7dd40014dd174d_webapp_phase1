@@ -1,15 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
+<div class="map">
+<script
+src="http://ditu.google.cn/maps/api/js?v=3.expkey=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
+</script>
+
+<script type="text/javascript">    
+var map;     
+function load() {     
+var NYU = new google.maps.LatLng(40.7291, -73.9965);     
+var myOptions = {   
+zoom: 13.5,     
+center: NYU,     
+mapTypeId: google.maps.MapTypeId.ROADMAP     
+};     
+map = new google.maps.Map(document.getElementById("map"), myOptions);     
+var marker = new google.maps.Marker({          
+map: map,     
+position: NYU     
+});          
+infowindow.open(map, marker);  getElementById("marker")      
+} 
+varlocations = newArray()
+</script> 
+</div>  
+
+<style>
+.container{
+	border: 1px solid #57068C;
+	width: 1226px;
+	overflow: hidden;
+	margin: 0;
+}
+.option{
+	width: 298px; height: 300px;
+	float: right;
+	border: 1px solid #57068C;
+	background-color: #F0F8FF;
+	margin：0；
+}	
+.ranking{
+	width: 300px; height: 300px;
+	float: right;
+	border: 1px solid #57068C;
+	background-color: #F0F8FF;
+	margin：0；
+}
+.details{
+	width: 600px; height: 300px;
+	float: right;
+	border: 1px solid #57068C;
+	background-color: #F0F8FF;
+
+}
+#map{
+	float:left;
+	border: 1px solid #000;
+	margin: 0；
+}
+.headname{
+	background-color: #57068C;
+	text-align: center;
+	color: #FFF;
+	margin-top: 0;
+}
+.subhead_name{
+	background-color: #57068C;
+	text-align: center;
+	color: #FFF;
+	margin: 0;
+}
+</style>
 </head>
-<body>
-    <div class="container">
-        <h1>Hello World!</h1>
-        <button id="btn">Click me</button>
-    </div>
-    <script src="index.js"></script>
+
+<body onLoad="load()"> 
+<div class="container">
+	<h1 class="headname">
+		The best choice - for Stern students
+	</h1>
+<div id="map" style="width:600px;height:602px;">
+<div id="marker"></div>
+	div
+	<h2 class="subhead_name">Map</h2>
+</div>
+<div class="information">
+<div class = "ranking">
+	<h2 class="subhead_name">Ranking</h2>
+</div>
+<div class = "option">
+	<h2 class="subhead_name">Option</h2>
+</div>
+<div class = "details">
+	<h2 class="subhead_name">Details</h2>
+</div>
+</div>
+</div>
 </body>
-</html>
+</html>	
